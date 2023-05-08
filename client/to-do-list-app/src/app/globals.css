@@ -2,19 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IM_Hyemin-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 250, 231, 171;
+  box-sizing: border-box;
+  margin: 0;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,4 +30,66 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.container {
+  flex: 8.5 1 0;
+  display: flex;
+  height: 70vh;
+}
+
+nav {
+  padding : 10px 0;
+  flex-basis: auto;
+  background-color: var(--bluish-gray-50);
+}
+nav ul li {
+  font-size: 1.5rem;
+  font-weight: 500;
+  list-style: none;
+  /* text-align: left; */
+  padding: 10px 30px;
+}
+nav ul li:hover {
+  background-color: var(--coz-purple-200);
+}
+nav ul li:active {
+  background-color:var(--coz-purple-300);
+}
+
+main {
+  padding : 20px;
+  flex: 3 1 0;
+  /* overflow-y: scroll; */
+}
+
+section {
+  text-align: left;
+  margin: 15px 15px 30px 15px;
+}
+
+p {
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+ul {
+}
+li {
+  padding: 10px 10px ;
+  text-align: center;
+  list-style-type: none;
+
+}
+li.selected{
+  color: var(--coz-purple-600);
+  transition: 0.2s;
+}
+li > li:nth-child(1) {
+  padding-top: 20px;
+}
+li > li {
+  list-style-type: circle;
+  padding-top: 5px;
 }
