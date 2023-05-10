@@ -9,6 +9,9 @@ config.autoAddCss = false
 
 const inter = Inter({ subsets: ['latin'] })
 
+import { store } from './app/store'
+import { Provider } from 'react-redux'
+
 export const metadata = {
   title: 'NEVERLAND',
   description: 'a simple application to record and manage tasks',
@@ -23,6 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <Provider store={store}>    //!
     <html lang="ko">
       <body className={inter.className}>
       <Header />
@@ -30,5 +34,6 @@ export default function RootLayout({ children }) {
       <Footer />
       </body>
     </html>
+    </Provider>
   )
 }
