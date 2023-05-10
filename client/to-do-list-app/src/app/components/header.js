@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Header() {
   return (
     <header className="text-gray-600 body-font">
-      <div className="container mx-auto flex flex-wrap justify-around p-10 md:flex-row items-center">
+      <div className="NavContainer mx-auto flex flex-wrap justify-around p-5 md:flex-row items-center">
 
       <nav className="mm:hidden md:m-auto flex flex-wrap items-center text-base justify-center navBar">
       <Link href="/" className="mr-5 hover:text-gray-900"> Home </Link>
@@ -15,7 +15,7 @@ export default function Header() {
       </nav>
 
         <Link href="/" className="flex title-font font-medium text-gray-900 my-auto mb-4 md:mb-0">
-          <Image src="/logo0.png" width={200} height={50} alt="NEVERLAND logo" />
+          <Image priority src="/logo0.png" width={200} height={50} alt="NEVERLAND logo" />
           {/* <span className="ml-3 text-xl">NEVERLAND</span> */}
         </Link>
 
